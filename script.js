@@ -1,69 +1,69 @@
 const board_border = 'black';
-    const board_background = 'OliveDrab';
-    const snake_col = 'black';
-    const snake_border = 'darkblue';
+const board_background = 'OliveDrab';
+const snake_col = 'black';
+const snake_border = 'darkblue';
     
-    let snake = [
+let snake = [
       {x: 250, y: 250},
       {x: 250, y: 240},
       {x: 250, y: 230},
       {x: 250, y: 220},
       {x: 250, y: 210}
-    ]
+]
     
-    // Gamescore
-    let score = 0;
-    // True if changing direction
-    let changing_direction = false;  
-    // Horizontal velocity
-    let dx = 0;
-    // Vertical velocity
-    let dy = 10;
-    // Difficulty multiple
-    let mult = 1;
+// Gamescore
+let score = 0;
+// True if changing direction
+let changing_direction = false;  
+// Horizontal velocity
+let dx = 0;
+// Vertical velocity
+let dy = 10;
+// Difficulty multiple
+let mult = 1;
     
-      // Get the canvas element
-    const snakeboard = document.getElementById("board");
-    // Return a two dimensional drawing context
-    const snakeboard_ctx = snakeboard.getContext("2d");
+// Get the canvas element
+const snakeboard = document.getElementById("board");
+// Return a two dimensional drawing context
+const snakeboard_ctx = snakeboard.getContext("2d");
     
-    document.addEventListener("keydown", change_direction);
+document.addEventListener("keydown", change_direction);
       
-    // main function called repeatedly to keep the game running
-    function main() {
+// main function called repeatedly to keep the game running
+function main() {
       
-        if (has_game_ended()) return;
+    if (has_game_ended()) return;
 
-        changing_direction = false;
-        setTimeout(function onTick() {
-        clear_board();
-        move_snake();
-        drawSnake();
-        // Call main again
-        main();
-      }, 100)
-    }
+    changing_direction = false;
+    setTimeout(function onTick() {
+    clear_board();
+    move_snake();
+    drawSnake();
+    // Call main again
+    main();
+    }, 100)
+}
     
-    // draw a border around the canvas
-    function clear_board() {
-      //  Select the colour to fill the drawing
-      snakeboard_ctx.fillStyle = board_background;
-      //  Select the colour for the border of the canvas
-      snakeboard_ctx.strokestyle = board_border;
-      // Draw a "filled" rectangle to cover the entire canvas
-      snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
-      // Draw a "border" around the entire canvas
-      snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
-    }
+// draw a border around the canvas
+function clear_board() {
+    //  Select the colour to fill the drawing
+    snakeboard_ctx.fillStyle = board_background;
+    //  Select the colour for the border of the canvas
+    snakeboard_ctx.strokestyle = board_border;
+    // Draw a "filled" rectangle to cover the entire canvas
+    snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
+    // Draw a "border" around the entire canvas
+    snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
+}
       
-      // Draw the snake on the canvas
-    function drawSnake() {
+// Draw the snake on the canvas
+function drawSnake() {
       // Draw each part
       snake.forEach(drawSnakePart)
-    }
+}
     
-    // Draw one snake part
-    function drawSnakePart(snakePart) {
+// Draw one snake part
+function drawSnakePart(snakePart) {
 
       // Set the colour of the snake part
       snakeboard_ctx.fillStyle = snake_col;
@@ -76,7 +76,7 @@ const board_border = 'black';
       snakeboard_ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
     }
       
-    function has_game_ended() {
+function has_game_ended() {
       for (let i = 4; i < snake.length; i++) {
         if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) return true
       }
@@ -85,9 +85,9 @@ const board_border = 'black';
       const hitToptWall = snake[0].y < 0;
       const hitBottomWall = snake[0].y > snakeboard.height - 10;
       return hitLeftWall || hitRightWall || hitToptWall || hitBottomWall
-    }
+}
 
-    function change_direction(event) {
+function change_direction(event) {
       const LEFT_KEY = 37;
       const RIGHT_KEY = 39;
       const UP_KEY = 38;
@@ -118,12 +118,52 @@ const board_border = 'black';
         dx = 0;
         dy = 10 * mult;
       }
-    }
+}
       
-    function move_snake() {
+function move_snake() {
       // Create the new Snake's head
       const head = {x: snake[0].x + dx, y: snake[0].y + dy};
       // Add the new head to the beginning of snake body
       snake.unshift(head);
       snake.pop();
     }
+
+function random(){
+    const ran = document.querySelector('.randomColour');
+    ran.addEventListener('mousedown', function () {
+        let dic =['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+        let i = 0;
+        let hex = '';
+        while(i < 6){
+            let r = Math.floor((Math.random() * 16) + 1);
+            hex = hex + dic[r-1];
+            i++;
+        }
+        colour = '#' + hex;
+        ran.style.backgroundColor = colour;
+
+    })
+}
+
+random();
+
+function black(){
+    const ran = document.querySelector('.black');
+    ran.addEventListener('mousedown', function () {
+        colour = 'black';
+        const r = document.querySelector('.randomColour');
+        r.style.backgroundColor = 'transparent';
+
+    });
+}
+
+black();
+
+function change(){
+    const ran = document.querySelector('.change');
+    ran.addEventListener('mousedown', function () {
+        colour = prompt("Enter a colour or hex code", "red of #aw12034");
+    });
+}
+
+change();
