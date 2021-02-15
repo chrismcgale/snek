@@ -146,6 +146,8 @@ function createButtons(){
     buts.appendChild(changeColour);
 }
 
+createButtons();
+
 
 function random(){
     const ran = document.querySelector('.randomColour');
