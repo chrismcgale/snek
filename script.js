@@ -159,8 +159,6 @@ function random(){
             i++;
         }
         snake_col = '#' + hex;
-        ran.style.backgroundColor = colour;
-
     })
 }
 
