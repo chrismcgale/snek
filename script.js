@@ -1,7 +1,7 @@
 const board_border = 'black';
 const board_background = 'OliveDrab';
-const snake_col = 'black';
 const snake_border = 'darkblue';
+let snake_col = 'black';
     
 let snake = [
       {x: 250, y: 250},
@@ -126,7 +126,26 @@ function move_snake() {
       // Add the new head to the beginning of snake body
       snake.unshift(head);
       snake.pop();
-    }
+}
+
+function createButtons(){
+
+    const randomColour = document.createElement('button');
+    randomColour.textContent = "random colour";
+    randomColour.setAttribute('class', 'randomColour');
+    buts.appendChild(randomColour);
+
+    const blackColour = document.createElement('button');
+    blackColour.textContent = "black";
+    blackColour.setAttribute('class', 'black');
+    buts.appendChild(blackColour);
+
+    const changeColour = document.createElement('button');
+    changeColour.textContent = "change";
+    changeColour.setAttribute('class', 'change');
+    buts.appendChild(changeColour);
+}
+
 
 function random(){
     const ran = document.querySelector('.randomColour');
@@ -139,7 +158,7 @@ function random(){
             hex = hex + dic[r-1];
             i++;
         }
-        colour = '#' + hex;
+        snake_col = '#' + hex;
         ran.style.backgroundColor = colour;
 
     })
@@ -150,7 +169,7 @@ random();
 function black(){
     const ran = document.querySelector('.black');
     ran.addEventListener('mousedown', function () {
-        colour = 'black';
+        snake_col = 'black';
         const r = document.querySelector('.randomColour');
         r.style.backgroundColor = 'transparent';
 
@@ -162,7 +181,7 @@ black();
 function change(){
     const ran = document.querySelector('.change');
     ran.addEventListener('mousedown', function () {
-        colour = prompt("Enter a colour or hex code", "red of #aw12034");
+        snake_col = prompt("Enter a colour or hex code", "red of #aw12034");
     });
 }
 
