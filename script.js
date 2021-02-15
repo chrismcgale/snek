@@ -35,8 +35,8 @@ document.addEventListener("keydown", change_direction);
 function main() {
       
     if (has_game_ended()) {
-        context.font = '25px Arial';
-        context.fillStyle = '0,0,0';
+        snakeboard_ctx.font = '25px Arial';
+        snakeboard_ctx.fillStyle = '0,0,0';
         snakeboard_ctx.fillText(over, 100, 100);                         
         return;
     }
