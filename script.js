@@ -141,7 +141,7 @@ function move_snake()
       // Add the new head to the beginning of snake body
       snake.unshift(head);
       const has_eaten_food = snake[0].x === food_x && snake[0].y === food_y;
-      if (has_eaten_Food) {
+      if (has_eaten_food) {
         // Increase score
         score += 10;
         // Display score on screen
