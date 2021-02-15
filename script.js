@@ -129,7 +129,7 @@ function move_snake() {
 }
 
 function createButtons(){
-
+    const buts = document.querySelector('#btn_ctn');
     const randomColour = document.createElement('button');
     randomColour.textContent = "random colour";
     randomColour.setAttribute('class', 'randomColour');
