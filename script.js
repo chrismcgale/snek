@@ -23,6 +23,10 @@ let dx = 0;
 let dy = 10;
 // Difficulty multiple
 let mult = 1;
+
+// Food coordinates
+let food_x;
+let food_y;
     
 // Get the canvas element
 const snakeboard = document.getElementById("board");
@@ -46,6 +50,7 @@ function main() {
     changing_direction = false;
     setTimeout(function onTick() {
     clear_board();
+    drawFood();
     move_snake();
     drawSnake();
     // Call main again
