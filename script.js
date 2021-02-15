@@ -1,38 +1,129 @@
-function createGrid(num){
-    const container = document.querySelector('#container');
-    var i = 0;
-    while (i < num){
-        const row = document.createElement('div');
-        row.setAttribute('class', 'row');
-        var j = 0;
-        while (j < num){
-            const col = document.createElement('div');
-            const px = Math.round(500 / num);
+const board_border = 'black';
+    const board_background = 'OliveDrab';
+    const snake_col = 'black';
+    const snake_border = 'darkblue';
+    
+    let snake = [
+      {x: 250, y: 250},
+      {x: 250, y: 240},
+      {x: 250, y: 230},
+      {x: 250, y: 220},
+      {x: 250, y: 210}
+    ]
+    
+    // Gamescore
+    let score = 0;
+    // True if changing direction
+    let changing_direction = false;  
+    // Horizontal velocity
+    let dx = 0;
+    // Vertical velocity
+    let dy = 10;
+    // Difficulty multiple
+    let mult = 1;
+    
+      // Get the canvas element
+    const snakeboard = document.getElementById("board");
+    // Return a two dimensional drawing context
+    const snakeboard_ctx = snakeboard.getContext("2d");
+    
+    document.addEventListener("keydown", change_direction);
+      
+    // main function called repeatedly to keep the game running
+    function main() {
+      
+        if (has_game_ended()) return;
 
-            col.style.height = px.toString(10)+'px';
-
-            col.style.width = px.toString(10)+'px';
-            col.style.borderTop = "thin solid black";
-            col.style.borderLeft = "thin solid black";
-            col.style.cssFloat = "left";
-            col.setAttribute('class', 'cell');
-            row.setAttribute('class', 'col');
-            if (j === num -1){
-                col.style.borderRight = "thin solid black";
-            }
-            if(i === num - 1){
-                col.style.borderBottom="thin solid black";
-            }
-            row.appendChild(col);
-            j++;
-
-
-
-
-        }
-        row.style.clear='left';
-        container.appendChild(row);
-        i++;
+        changing_direction = false;
+        setTimeout(function onTick() {
+        clear_board();
+        move_snake();
+        drawSnake();
+        // Call main again
+        main();
+      }, 100)
     }
-    sketch();
-}
+    
+    // draw a border around the canvas
+    function clear_board() {
+      //  Select the colour to fill the drawing
+      snakeboard_ctx.fillStyle = board_background;
+      //  Select the colour for the border of the canvas
+      snakeboard_ctx.strokestyle = board_border;
+      // Draw a "filled" rectangle to cover the entire canvas
+      snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
+      // Draw a "border" around the entire canvas
+      snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
+    }
+      
+      // Draw the snake on the canvas
+    function drawSnake() {
+      // Draw each part
+      snake.forEach(drawSnakePart)
+    }
+    
+    // Draw one snake part
+    function drawSnakePart(snakePart) {
+
+      // Set the colour of the snake part
+      snakeboard_ctx.fillStyle = snake_col;
+      // Set the border colour of the snake part
+      snakeboard_ctx.strokestyle = snake_border;
+      // Draw a "filled" rectangle to represent the snake part at the coordinates
+      // the part is located
+      snakeboard_ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
+      // Draw a border around the snake part
+      snakeboard_ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
+    }
+      
+    function has_game_ended() {
+      for (let i = 4; i < snake.length; i++) {
+        if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) return true
+      }
+      const hitLeftWall = snake[0].x < 0;
+      const hitRightWall = snake[0].x > snakeboard.width - 10;
+      const hitToptWall = snake[0].y < 0;
+      const hitBottomWall = snake[0].y > snakeboard.height - 10;
+      return hitLeftWall || hitRightWall || hitToptWall || hitBottomWall
+    }
+
+    function change_direction(event) {
+      const LEFT_KEY = 37;
+      const RIGHT_KEY = 39;
+      const UP_KEY = 38;
+      const DOWN_KEY = 40;
+      
+    // Prevent the snake from reversing
+    
+      if (changing_direction) return;
+      changing_direction = true;
+      const keyPressed = event.keyCode;
+      const goingUp = dy === -10 * mult;
+      const goingDown = dy === 10 * mult;
+      const goingRight = dx === 10 * mult;
+      const goingLeft = dx === -10 * mult;
+      if (keyPressed === LEFT_KEY && !goingRight) {
+        dx = -10 * mult;
+        dy = 0;
+      }
+      if (keyPressed === UP_KEY && !goingDown) {
+        dx = 0;
+        dy = -10 * mult;
+      }
+      if (keyPressed === RIGHT_KEY && !goingLeft) {
+        dx = 10 * mult;
+        dy = 0;
+      }
+      if (keyPressed === DOWN_KEY && !goingUp) {
+        dx = 0;
+        dy = 10 * mult;
+      }
+    }
+      
+    function move_snake() {
+      // Create the new Snake's head
+      const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+      // Add the new head to the beginning of snake body
+      snake.unshift(head);
+      snake.pop();
+    }
