@@ -1,7 +1,9 @@
 const board_border = 'black';
 const board_background = 'OliveDrab';
 const snake_border = 'darkblue';
+const over = 'GAME OVER';
 let snake_col = 'black';
+
     
 let snake = [
       {x: 250, y: 250},
@@ -32,7 +34,12 @@ document.addEventListener("keydown", change_direction);
 // main function called repeatedly to keep the game running
 function main() {
       
-    if (has_game_ended()) return;
+    if (has_game_ended()) {
+        context.font = '25px Arial';
+        context.fillStyle = '0,0,0';
+        snakeboard_ctx.fillText(over, 100, 100);                         
+        return;
+    }
 
     changing_direction = false;
     setTimeout(function onTick() {
