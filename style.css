@@ -6,9 +6,8 @@
 }
 #board
 {
-  height: 400px;
-  position: relative;
-  width: 400px;
+  height: 100%;
+  width: 100%;
 }
 #butn_ctn
 {
