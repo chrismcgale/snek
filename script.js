@@ -180,7 +180,7 @@ function drawFood()
 }
 
 function random(){
-    const ran = document.getElementById(random);
+    const ran = document.getElementById('random');
     ran.addEventListener('mousedown', function () {
         let dic =['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
         let i = 0;
@@ -197,7 +197,7 @@ function random(){
 random();
 
 function black(){
-    const ran = document.getElementById(black);
+    const ran = document.getElementById('black');
     ran.addEventListener('mousedown', function () {
         snake_col = 'black';
         const r = document.querySelector('.randomColour');
@@ -209,7 +209,7 @@ function black(){
 black();
 
 function change(){
-    const ran = document.getElementById(change);
+    const ran = document.getElementById('change');
     ran.addEventListener('mousedown', function () {
         snake_col = prompt("Enter a colour or hex code", "red of #aw12034");
     });
