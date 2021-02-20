@@ -26,39 +26,40 @@ html, body {
   height: 500px;
 }
 
-#slug {
+.buttons {
   position: absolute;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  border: none;
+  background: none;
+}
+
+#slug {
   top: 100px; 
   left: 150px;
-
 }
 
 #worm {
-  position: absolute;
   top:100px; 
-  left:250px; 
+  left:250px;
 }
 
 #python {
-  position: absolute;
   top:100px; 
   left:350px;
 }
 
 #random {
-  position: absolute;
   top:300px; 
   left:150px;
 }
 
 #black {
-  position: absolute;
   top:300px; 
   left:250px;
 }
 
 #change {
-  position: absolute;
   top:300px; 
   left:350px;
 }
