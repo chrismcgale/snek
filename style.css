@@ -10,11 +10,10 @@ html, body {
 
 game {
   display: block;
-  position: absolute;
-  width: 100%; 
 }
 
 board {
+  display: block;
   position: absolute;
   color: rgb(89, 152, 47);
   width: 100%;
