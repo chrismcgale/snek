@@ -21,8 +21,6 @@ html, body {
 }
 #butn_ctn
 {
-  bottom: 0;
-  left: 0;
   position: absolute;
   width: 100%;
 }
