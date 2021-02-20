@@ -10,6 +10,7 @@ var bla = document.getElementById('black');
 var slug = document.getElementById('slug');
 var worm = document.getElementById('worm');
 var python = document.getElementById('python');
+var tit = document.getElementById('title');
 
     
 let snake = [
@@ -75,6 +76,7 @@ function hideButtons() {
     worm.style.display = "none";
     slug.style.display = "none";
     python.style.display = "none";
+    tit.style.display = "none";
   }
 }
 
