@@ -16,7 +16,7 @@ html, body
   position: relative;
   height: 500px;
   width: 500px;
-  colour: rgb(89, 152, 47);
+  color: rgb(89, 152, 47);
 }
 #board
 {
