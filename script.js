@@ -42,7 +42,7 @@ function main() {
       
     if (has_game_ended()) {
         backButtons();
-        over();                      
+        game();                      
         return;
     }
 
@@ -80,7 +80,7 @@ function backButtons() {
     python.style.display = "block";
 }
 
-function over() {
+function game() {
     snakeboard_ctx.font = '25px Arial';
     snakeboard_ctx.fillStyle = '0,0,0';
     snakeboard_ctx.fillText(over, 100, 100);   
