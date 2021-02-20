@@ -20,7 +20,7 @@ html, body
 }
 #board
 {
-  position absolute;
+  position: absolute;
 }
 #butn_ctn
 {
