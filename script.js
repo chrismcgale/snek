@@ -37,7 +37,9 @@ document.addEventListener("keydown", change_direction);
 
 //clear_board();
 
-gen_food();
+snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
+    // Draw a "border" around the entire canvas
+snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
       
 // main function called repeatedly to keep the game running
 function main() {
