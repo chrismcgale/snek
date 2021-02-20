@@ -1,8 +1,8 @@
-const board_border = 'blue';
+const board_border = 'black';
 const board_background = 'rgb(89, 152, 47)';
 const snake_border = 'darkblue';
+const snake_col = 'black';
 const over = 'GAME OVER';
-let snake_col = 'black';
 
 var rand = document.getElementById('random');
 var chan = document.getElementById('change');
