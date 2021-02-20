@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'Undertale';
+  src: url(font/DeterminationMonoWebRegular-Z5oq.ttf);
+}
+
 * {
-  font-family: 'CHAVA';
+  font-family: 'Undertale';
   margin: 0;
   padding: 0;
 }
