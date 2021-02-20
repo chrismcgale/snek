@@ -6,7 +6,7 @@ let snake_col = 'black';
 
 let rand = document.getElementById('random');
 let change = document.getElementById('change');
-let black = document.getElementById('black');
+let bla = document.getElementById('black');
 let slug = document.getElementById('slug');
 let worm = document.getElementById('worm');
 let python = document.getElementById('python');
@@ -70,7 +70,7 @@ function hideButtons() {
     return;
   } else {
     rand.style.display = "none";
-    black.style.display = "none";
+    bla.style.display = "none";
     change.style.display = "none";
     worm.style.display = "none";
     slug.style.display = "none";
@@ -80,7 +80,7 @@ function hideButtons() {
 
 function backButtons() {
     rand.style.display = "block";
-    black.style.display = "block";
+    bla.style.display = "block";
     change.style.display = "block";
     worm.style.display = "block";
     slug.style.display = "block";
