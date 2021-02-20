@@ -64,10 +64,15 @@ html, body {
 }
 
 #left {
-  
-  
+  position: absolute;
+  bacground: 'black';
+  left: 0;
+  width: 100px;
 }
 
 #right {
-  
+  position: absolute;
+  bacground: 'black';
+  right: 0;
+  width: 100px;
 }
