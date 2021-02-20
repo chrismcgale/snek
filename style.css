@@ -21,25 +21,25 @@ html, body {
 }
 
 #butn_ctn {
-  position: absolute;
+  position: relative;
   left:30%;
   top:40% 
 }
 
 #slug {
-  position: absolute;
+  position: relative;
   left:30px;
   top:60% 
 }
 
 #worm {
-  position: absolute;
+  position: relative;
   left:60px;
   top:60% 
 }
 
 #python {
-  position: absolute;
+  position: relative;
   left:90px;
   top:60% 
 }
