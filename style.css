@@ -8,18 +8,18 @@ html, body {
   height: 100%; 
 }
 
-game {
+#game {
   display: block;
 }
 
-board {
+#board {
   position: absolute;
   color: rgb(89, 152, 47);
   width: 500px;
   height: 500px;
 }
 
-butn_ctn {
+#butn_ctn {
   position: absolute;
   left:30%;
   top:40%
