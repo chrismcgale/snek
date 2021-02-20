@@ -1,13 +1,13 @@
 #container
 {
-  height: 400px;
   position: relative;
-  width: 400px;
+  height: 500px;
+  width: 500px;
 }
 #board
 {
-  height: 100%;
-  width: 100%;
+  postition: absolute;
+  background-colour: 6018;
 }
 #butn_ctn
 {
