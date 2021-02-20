@@ -41,12 +41,12 @@ clear_board();
 function main() {
       
     if (has_game_ended()) {
-        snakeboard_ctx.font = '25px Arial';
-        snakeboard_ctx.fillStyle = '0,0,0';
-        snakeboard_ctx.fillText(over, 100, 100);                         
+        backButtons();
+        over();                      
         return;
     }
 
+    hideButtons();
     changing_direction = false;
     setTimeout(function onTick() {
     clear_board();
@@ -56,6 +56,34 @@ function main() {
     // Call main again
     main();
     }, 100)
+}
+
+function hideButtons() {
+    if (rand.style.display == "none") {
+    return;
+  } else {
+    rand.style.display = "none";
+    black.style.display = "none";
+    change.style.display = "none";
+    worm.style.display = "none";
+    slug.style.display = "none";
+    python.style.display = "none";
+  }
+}
+
+function backButtons() {
+    rand.style.display = "block";
+    black.style.display = "block";
+    change.style.display = "block";
+    worm.style.display = "block";
+    slug.style.display = "block";
+    python.style.display = "block";
+}
+
+function over() {
+    snakeboard_ctx.font = '25px Arial';
+    snakeboard_ctx.fillStyle = '0,0,0';
+    snakeboard_ctx.fillText(over, 100, 100);   
 }
     
 // draw a border around the canvas
