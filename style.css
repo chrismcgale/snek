@@ -8,7 +8,7 @@ html, body {
   height: 100%; 
 }
 
-game {
+.game {
   width: 500px;
   height: 500px;
 }
