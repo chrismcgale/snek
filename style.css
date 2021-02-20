@@ -8,6 +8,11 @@ html, body {
   background-color: rgb(110, 47, 152);
 }
 
+#score {
+  text-align: center;
+  font-size: 140px;
+}
+
 .game {
   margin: auto;
   position: relative;
