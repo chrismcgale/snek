@@ -5,7 +5,7 @@ const over = 'GAME OVER';
 let snake_col = 'black';
 
 let rand = document.getElementById('random');
-let change = document.getElementById('change');
+let chan = document.getElementById('change');
 let bla = document.getElementById('black');
 let slug = document.getElementById('slug');
 let worm = document.getElementById('worm');
@@ -71,7 +71,7 @@ function hideButtons() {
   } else {
     rand.style.display = "none";
     bla.style.display = "none";
-    change.style.display = "none";
+    chan.style.display = "none";
     worm.style.display = "none";
     slug.style.display = "none";
     python.style.display = "none";
@@ -81,7 +81,7 @@ function hideButtons() {
 function backButtons() {
     rand.style.display = "block";
     bla.style.display = "block";
-    change.style.display = "block";
+    chan.style.display = "block";
     worm.style.display = "block";
     slug.style.display = "block";
     python.style.display = "block";
