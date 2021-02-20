@@ -1,5 +1,5 @@
 const board_border = 'blue';
-const board_background = rgb(89, 152, 47);
+const board_background = 'rgb(89, 152, 47)';
 const snake_border = 'darkblue';
 const over = 'GAME OVER';
 let snake_col = 'black';
