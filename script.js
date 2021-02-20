@@ -35,7 +35,7 @@ const snakeboard_ctx = snakeboard.getContext("2d");
     
 document.addEventListener("keydown", change_direction);
 
-//clear_board();
+clear_board();
 
 gen_food();
       
@@ -63,7 +63,7 @@ function main() {
 // draw a border around the canvas
 function clear_board() {
     //  Select the colour to fill the drawing
-    snakeboard_ctx.fillStyle = board_background;
+    //snakeboard_ctx.fillStyle = board_background;
     //  Select the colour for the border of the canvas
     snakeboard_ctx.strokestyle = board_border;
     // Draw a "filled" rectangle to cover the entire canvas
