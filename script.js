@@ -39,7 +39,7 @@ document.addEventListener("keydown", change_direction);
 
 //snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
     // Draw a "border" around the entire canvas
-snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
+//snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
       
 // main function called repeatedly to keep the game running
 function main() {
@@ -53,12 +53,12 @@ function main() {
 
     changing_direction = false;
     setTimeout(function onTick() {
-    clear_board();
+   // clear_board();
     drawFood();
     move_snake();
     drawSnake();
     // Call main again
-    main();
+   // main();
     }, 100)
 }
     
