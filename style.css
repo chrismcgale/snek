@@ -9,8 +9,8 @@ html, body {
 
 .game {
   margin: auto;
-  width: 500px;
-  height: 500px;
+  width: 70%;
+  height: 70%;
 }
 
 #board {
