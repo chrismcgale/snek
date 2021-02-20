@@ -47,7 +47,7 @@ clear_board();
 // main function called repeatedly to keep the game running
 function main() {
       
-    if (has_game_ended()) {
+    if (!has_game_ended()) {
         backButtons();
         game();                      
         return;
