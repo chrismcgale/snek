@@ -37,7 +37,7 @@ document.addEventListener("keydown", change_direction);
 
 //clear_board();
 
-snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
+//snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
     // Draw a "border" around the entire canvas
 snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
       
