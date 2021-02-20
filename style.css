@@ -10,7 +10,7 @@ html, body {
 
 #score {
   text-align: center;
-  font-size: 140px;
+  font-size: 100px;
 }
 
 .game {
@@ -18,6 +18,13 @@ html, body {
   position: relative;
   width: 500px;
   height: 500px;
+}
+
+#title {
+  top: 100px;
+  position: absolute;
+  text-align: center;
+  font-size: 100px;
 }
 
 #board {
@@ -35,17 +42,17 @@ button {
 }
 
 #slug {
-  top: 100px; 
+  top: 250px; 
   left: 150px;
 }
 
 #worm {
-  top:100px; 
+  top:250px; 
   left:250px;
 }
 
 #python {
-  top:100px; 
+  top:250px; 
   left:350px;
 }
 
