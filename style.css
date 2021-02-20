@@ -36,7 +36,7 @@ html, body {
   height: 500px;
 }
 
-.button {
+button {
   position: absolute;
   font-family: Verdana, sans-serif;
   font-size: 16px;
