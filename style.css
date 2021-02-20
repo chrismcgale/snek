@@ -8,51 +8,49 @@ html, body {
 }
 
 .game {
-  margin: auto;
-  width: 70%;
-  height: 70%;
+  position relative;
 }
 
 #board {
   position: absolute;
   background-color: rgb(89, 152, 47);
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: auto;
 }
 
 #slug {
-  position: relative;
+  position: absolute;
   top: 100px; 
   left: 150px;
 
 }
 
 #worm {
-  position: relative;
+  position: absolute;
   top:100px; 
   left:250px; 
 }
 
 #python {
-  position: relative;
+  position: absolute;
   top:100px; 
   left:350px;
 }
 
 #random {
-  position: relative;
+  position: absolute;
   top:300px; 
   left:150px;
 }
 
 #black {
-  position: relative;
+  position: absolute;
   top:300px; 
   left:250px;
 }
 
 #change {
-  position: relative;
+  position: absolute;
   top:100px; 
   left:350px;
 }
