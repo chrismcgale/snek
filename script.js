@@ -43,10 +43,10 @@ const snakeboard_ctx = snakeboard.getContext("2d");
 document.addEventListener("keydown", change_direction);
 
 clear_board();
-      
+drawSnake();
+
 // main function called repeatedly to keep the game running
-function main() {
-      
+function main() {    
     if (!has_game_ended()) {
         backButtons();
         game();                      
@@ -123,7 +123,7 @@ function drawSnakePart(snakePart) {
       snakeboard_ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
       // Draw a border around the snake part
       snakeboard_ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
-    }
+}
       
 function has_game_ended() {
       for (let i = 4; i < snake.length; i++) {
