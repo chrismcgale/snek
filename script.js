@@ -212,9 +212,7 @@ function drawFood()
       snakeboard_ctx.strokeRect(food_x, food_y, 10, 10);
 }
 
-function random(){
-    const ran = document.getElementById('random');
-    ran.addEventListener('mousedown', function () {
+$("#random").click(function() {
         let dic =['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
         let i = 0;
         let hex = '';
@@ -224,28 +222,17 @@ function random(){
             i++;
         }
         snake_col = '#' + hex;
-    })
-}
+});
 
-random();
 
-function black(){
-    const ran = document.getElementById('black');
-    ran.addEventListener('mousedown', function () {
+$("#black").click(function() {
         snake_col = 'black';
         const r = document.querySelector('.randomColour');
         r.style.backgroundColor = 'transparent';
 
-    });
-}
+});
 
-black();
-
-function change(){
-    const ran = document.getElementById('change');
-    ran.addEventListener('mousedown', function () {
+$("#change").click(function() {
         snake_col = prompt("Enter a colour or hex code", "red of #aw12034");
-    });
-}
+});
 
-change();
