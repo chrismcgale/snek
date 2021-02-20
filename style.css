@@ -18,13 +18,14 @@ html, body {
   position: relative;
   width: 500px;
   height: 500px;
+  z-index: -1;
 }
 
 #board {
   position: absolute;
-
   width: 500px;
   height: 500px;
+  z-index: -1;
 }
 
 #slug {
