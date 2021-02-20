@@ -1,4 +1,4 @@
-const board_border = 'black';
+const board_border = rgb(89, 152, 47);
 const background = 'OliveDrab';
 const snake_border = 'darkblue';
 const over = 'GAME OVER';
@@ -63,7 +63,7 @@ function main() {
 // draw a border around the canvas
 function clear_board() {
     //  Select the colour to fill the drawing
-    //snakeboard_ctx.fillStyle = board_background;
+    snakeboard_ctx.fillStyle = board_background;
     //  Select the colour for the border of the canvas
     snakeboard_ctx.strokestyle = board_border;
     // Draw a "filled" rectangle to cover the entire canvas
