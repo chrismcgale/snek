@@ -4,6 +4,13 @@ const snake_border = 'darkblue';
 const over = 'GAME OVER';
 let snake_col = 'black';
 
+let rand = document.getElementById('random');
+let change = document.getElementById('change');
+let black = document.getElementById('black');
+let slug = document.getElementById('slug');
+let worm = document.getElementById('worm');
+let python = document.getElementById('python');
+
     
 let snake = [
       {x: 250, y: 250},
