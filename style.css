@@ -14,11 +14,11 @@ html, body
 {
   display: block;
   position: absolute;
+  width: 100%; 
 }
 #board
 {
   position: absolute;
-  width: 100%;
   color: rgb(89, 152, 47);
   height: 500px;
 }
