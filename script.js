@@ -65,7 +65,7 @@ function clear_board() {
     //  Select the colour to fill the drawing
     //snakeboard_ctx.fillStyle = board_background;
     //  Select the colour for the border of the canvas
-    snakeboard_ctx.strokestyle = board_border;
+    //snakeboard_ctx.strokestyle = board_border;
     // Draw a "filled" rectangle to cover the entire canvas
     snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
     // Draw a "border" around the entire canvas
