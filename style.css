@@ -22,36 +22,37 @@ html, body {
 
 #slug {
   position: relative;
-  left:20%;
-  top:40% 
+  top: 100px; 
+  left: 150px;
+
 }
 
 #worm {
   position: relative;
-  left:50%;
-  top:40% 
+  top:100px; 
+  left:250px; 
 }
 
 #python {
   position: relative;
-  left:80%;
-  top:40% 
+  top:100px; 
+  left:350px;
 }
 
 #random {
   position: relative;
-  left:20%;
-  top:60% 
+  top:300px; 
+  left:150px;
 }
 
 #black {
   position: relative;
-  left:50%;
-  top:60% 
+  top:300px; 
+  left:250px;
 }
 
 #change {
   position: relative;
-  left:80%;
-  top:60% 
+  top:100px; 
+  left:350px;
 }
