@@ -1,11 +1,11 @@
 * {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 html, body { 
-  width:100%; 
-  height:100%; 
+  width: 100%; 
+  height: 100%; 
 }
 
 #container
@@ -17,8 +17,7 @@ html, body {
 }
 #board
 {
-  postition: absolute;
-  background-colour: rgb(89, 152, 47);
+  background: rgb(89, 152, 47);
 }
 #butn_ctn
 {
