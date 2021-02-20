@@ -28,12 +28,18 @@ html, body {
 
 #slug {
   position: absolute;
-  left:60%;
+  left:30px;
   top:60% 
 }
 
 #worm {
   position: absolute;
-  left:90%;
+  left:60px;
+  top:60% 
+}
+
+#python {
+  position: absolute;
+  left:90px;
   top:60% 
 }
