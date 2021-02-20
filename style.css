@@ -14,13 +14,13 @@ html, body
 {
   display: block;
   position: absolute;
-  height: 500px;
-  width: 100%;
-  color: rgb(89, 152, 47);
 }
 #board
 {
   position: absolute;
+  width: 100%;
+  color: rgb(89, 152, 47);
+  height: 500px;
 }
 #butn_ctn
 {
