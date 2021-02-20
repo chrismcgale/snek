@@ -4,12 +4,12 @@ const snake_border = 'darkblue';
 const over = 'GAME OVER';
 let snake_col = 'black';
 
-let rand = document.getElementById('random');
-let chan = document.getElementById('change');
-let bla = document.getElementById('black');
-let slug = document.getElementById('slug');
-let worm = document.getElementById('worm');
-let python = document.getElementById('python');
+var rand = document.getElementById('random');
+var chan = document.getElementById('change');
+var bla = document.getElementById('black');
+var slug = document.getElementById('slug');
+var worm = document.getElementById('worm');
+var python = document.getElementById('python');
 
     
 let snake = [
