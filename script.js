@@ -35,7 +35,7 @@ const snakeboard_ctx = snakeboard.getContext("2d");
     
 document.addEventListener("keydown", change_direction);
 
-clear_board();
+//clear_board();
 
 gen_food();
       
