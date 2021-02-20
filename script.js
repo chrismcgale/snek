@@ -179,27 +179,6 @@ function drawFood()
       snakeboard_ctx.strokeRect(food_x, food_y, 10, 10);
 }
 
-function createButtons(){
-    const buts = document.querySelector('#btn_ctn');
-    const randomColour = document.createElement('button');
-    randomColour.textContent = "random colour";
-    randomColour.setAttribute('class', 'randomColour');
-    buts.appendChild(randomColour);
-
-    const blackColour = document.createElement('button');
-    blackColour.textContent = "black";
-    blackColour.setAttribute('class', 'black');
-    buts.appendChild(blackColour);
-
-    const changeColour = document.createElement('button');
-    changeColour.textContent = "change";
-    changeColour.setAttribute('class', 'change');
-    buts.appendChild(changeColour);
-}
-
-createButtons();
-
-
 function random(){
     const ran = document.querySelector('.randomColour');
     ran.addEventListener('mousedown', function () {
