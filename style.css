@@ -1,5 +1,6 @@
 #container
 {
+  display: inline-block;
   position: relative;
   height: 500px;
   width: 500px;
@@ -7,7 +8,7 @@
 #board
 {
   postition: absolute;
-  background-colour: "rgb(89, 152, 47)";
+  background-colour: rgb(89, 152, 47);
 }
 #butn_ctn
 {
