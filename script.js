@@ -92,6 +92,7 @@ function hideButtons() {
     slug.style.display = "none";
     python.style.display = "none";
     tit.style.display = "none";
+    game.style.display = "none";
   }
 }
 
