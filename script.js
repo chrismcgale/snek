@@ -40,7 +40,6 @@ let food_y;
 let dic =['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
 let rainbow = false;
 
-
     
 // Get the canvas element
 const snakeboard = document.getElementById("board");
@@ -56,7 +55,16 @@ gen_food();
 function main() { 
     if (has_game_ended()) {
         backButtons();
-        game();                      
+        game();
+        clear_board();
+        gen_food();
+        snake = [
+      {x: 250, y: 250},
+      {x: 250, y: 240},
+      {x: 250, y: 230},
+      {x: 250, y: 220},
+      {x: 250, y: 210}
+         ]
         return;
     }
     hideButtons();
