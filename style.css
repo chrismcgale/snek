@@ -36,6 +36,14 @@ html, body {
   left: 30%;
 }
 
+#over {
+  top: 100px;
+  position: absolute;
+  text-align: center;
+  font-size: 75px;
+  left: 30%;
+}
+
 #board {
   position: absolute;
   width: 500px;
