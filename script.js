@@ -12,7 +12,7 @@ var slug = document.getElementById('slug');
 var worm = document.getElementById('worm');
 var python = document.getElementById('python');
 var tit = document.getElementById('title');
-var over = document.getElementById('over');
+var end = document.getElementById('end');
 
     
 let snake = [
@@ -91,7 +91,7 @@ function hideButtons() {
     slug.style.display = "none";
     python.style.display = "none";
     tit.style.display = "none";
-    over.style.display = "none";
+    end.style.display = "none";
   }
 }
 
@@ -103,7 +103,7 @@ function backButtons() {
     worm.style.display = "block";
     slug.style.display = "block";
     python.style.display = "block";
-    over.style.display = "block";
+    end.style.display = "block";
 }
 
     
