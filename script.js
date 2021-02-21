@@ -65,6 +65,8 @@ function main() {
       {x: 250, y: 220},
       {x: 250, y: 210}
          ]
+        dx = dx / mult;
+        dy = dy / mult;
         return;
     }
     hideButtons();
