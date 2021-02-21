@@ -35,6 +35,8 @@ let mult = 1;
 // Food coordinates
 let food_x;
 let food_y;
+
+
     
 // Get the canvas element
 const snakeboard = document.getElementById("board");
@@ -48,15 +50,12 @@ drawSnake();
 
 // main function called repeatedly to keep the game running
 function main() { 
-    alert(dx);
+    alert(snake[0].x);
     if (!has_game_ended()) {
         backButtons();
         game();                      
         return;
     }
-    hideButtons();
-    drawSnake();
-    return;
     changing_direction = false;
     setTimeout(function onTick() {
     clear_board();
