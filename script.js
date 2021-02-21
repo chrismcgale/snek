@@ -47,7 +47,8 @@ clear_board();
 drawSnake();
 
 // main function called repeatedly to keep the game running
-function main() {    
+function main() { 
+    alert(snake.[0].x);
     if (!has_game_ended()) {
         backButtons();
         game();                      
