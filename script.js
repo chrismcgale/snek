@@ -12,7 +12,7 @@ var slug = document.getElementById('slug');
 var worm = document.getElementById('worm');
 var python = document.getElementById('python');
 var tit = document.getElementById('title');
-var game = document.getElementById('game');
+var over = document.getElementById('over');
 
     
 let snake = [
@@ -65,7 +65,6 @@ function main() {
       {x: 250, y: 220},
       {x: 250, y: 210}
          ]
-        game();
         return;
     }
     hideButtons();
@@ -92,7 +91,7 @@ function hideButtons() {
     slug.style.display = "none";
     python.style.display = "none";
     tit.style.display = "none";
-    game.style.display = "none";
+    over.style.display = "none";
   }
 }
 
@@ -104,11 +103,9 @@ function backButtons() {
     worm.style.display = "block";
     slug.style.display = "block";
     python.style.display = "block";
+    over.style.display = "block";
 }
 
-function game() {
-    game.style.display = "block";
-}
     
 // draw a border around the canvas
 function clear_board() {
