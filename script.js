@@ -54,6 +54,8 @@ function main() {
         return;
     }
 
+    move_snake();
+    drawSnake();
     hideButtons();
     changing_direction = false;
     setTimeout(function onTick() {
