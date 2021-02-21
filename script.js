@@ -55,7 +55,6 @@ gen_food();
 function main() { 
     if (has_game_ended()) {
         backButtons();
-        game();
         clear_board();
         gen_food();
         snake = [
@@ -65,6 +64,7 @@ function main() {
       {x: 250, y: 220},
       {x: 250, y: 210}
          ]
+        game();
         return;
     }
     hideButtons();
