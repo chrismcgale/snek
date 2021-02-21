@@ -39,7 +39,6 @@ let food_y;
 
 let dic =['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
 let rainbow = false;
-var started= true;
     
 // Get the canvas element
 const snakeboard = document.getElementById("board");
@@ -56,10 +55,6 @@ function main() {
     if (has_game_ended()) {
         restart();
         return;
-    }
-    if(started){
-        dy = dy * mult;
-        started = false;
     }
     hideButtons();
     changing_direction = false;
