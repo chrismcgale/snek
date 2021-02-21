@@ -53,10 +53,9 @@ function main() {
         game();                      
         return;
     }
-
-    move_snake();
-    drawSnake();
     hideButtons();
+    drawSnake();
+    return;
     changing_direction = false;
     setTimeout(function onTick() {
     clear_board();
