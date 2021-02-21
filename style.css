@@ -37,6 +37,7 @@ html, body {
 }
 
 #end {
+  display: none;
   top: 100px;
   position: absolute;
   text-align: center;
