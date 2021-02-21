@@ -50,6 +50,7 @@ const snakeboard_ctx = snakeboard.getContext("2d");
 document.addEventListener("keydown", change_direction);
 
 clear_board();
+genfood();
 
 // main function called repeatedly to keep the game running
 function main() { 
@@ -121,7 +122,6 @@ function drawSnake() {
     
 // Draw one snake part
 function drawSnakePart(snakePart) {
-
       // Set the colour of the snake part
       if(rainbow){
         let hex = '';
