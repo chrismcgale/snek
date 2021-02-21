@@ -13,7 +13,7 @@ var worm = document.getElementById('worm');
 var python = document.getElementById('python');
 var tit = document.getElementById('title');
 var end = document.getElementById('end');
-
+var start
     
 let snake = [
       {x: 250, y: 250},
@@ -40,7 +40,7 @@ let food_y;
 
 let dic =['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
 let rainbow = false;
-
+vr started= true;
     
 // Get the canvas element
 const snakeboard = document.getElementById("board");
@@ -55,19 +55,12 @@ gen_food();
 // main function called repeatedly to keep the game running
 function main() { 
     if (has_game_ended()) {
-        backButtons();
-        clear_board();
-        gen_food();
-        snake = [
-      {x: 250, y: 250},
-      {x: 250, y: 240},
-      {x: 250, y: 230},
-      {x: 250, y: 220},
-      {x: 250, y: 210}
-         ]
-        dx = dx / mult;
-        dy = dy / mult;
+        restart();
         return;
+    }
+    if(started){
+        dy = dy * mult;
+        started = false;
     }
     hideButtons();
     changing_direction = false;
@@ -79,6 +72,21 @@ function main() {
     // Call main again
     main();
     }, 100)
+}
+
+function restart() {
+    backButtons();
+        clear_board();
+        gen_food();
+        snake = [
+      {x: 250, y: 250},
+      {x: 250, y: 240},
+      {x: 250, y: 230},
+      {x: 250, y: 220},
+      {x: 250, y: 210}
+         ]
+        dx = dx / mult;
+        dy = dy / mult;
 }
 
 function hideButtons() {
