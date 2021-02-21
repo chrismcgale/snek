@@ -50,7 +50,7 @@ const snakeboard_ctx = snakeboard.getContext("2d");
 document.addEventListener("keydown", change_direction);
 
 clear_board();
-genfood();
+gen_food();
 
 // main function called repeatedly to keep the game running
 function main() { 
