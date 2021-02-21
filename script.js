@@ -50,7 +50,6 @@ drawSnake();
 
 // main function called repeatedly to keep the game running
 function main() { 
-    alert(snakeboard.width);
     if (!has_game_ended()) {
         backButtons();
         game();                      
