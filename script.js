@@ -7,6 +7,7 @@ const over = 'GAME OVER';
 var rand = document.getElementById('random');
 var chan = document.getElementById('change');
 var bla = document.getElementById('black');
+var rain = document.getElementById('rainbow');
 var slug = document.getElementById('slug');
 var worm = document.getElementById('worm');
 var python = document.getElementById('python');
@@ -76,6 +77,7 @@ function hideButtons() {
     rand.style.display = "none";
     bla.style.display = "none";
     chan.style.display = "none";
+    rain.style.display = "none";
     worm.style.display = "none";
     slug.style.display = "none";
     python.style.display = "none";
@@ -87,6 +89,7 @@ function backButtons() {
     rand.style.display = "block";
     bla.style.display = "block";
     chan.style.display = "block";
+    rain.style.display = "block";
     worm.style.display = "block";
     slug.style.display = "block";
     python.style.display = "block";
@@ -254,5 +257,5 @@ $("#change").click(function() {
 });
 
 $("#rainbow").click(function() {
-    rainbow = true;
+        rainbow = true;
 });
