@@ -54,6 +54,7 @@ function main() {
         game();                      
         return;
     }
+    hideButtons();
     changing_direction = false;
     setTimeout(function onTick() {
     clear_board();
