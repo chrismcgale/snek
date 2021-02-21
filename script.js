@@ -36,6 +36,9 @@ let mult = 1;
 let food_x;
 let food_y;
 
+let dic =['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+let rainbow = false;
+
 
     
 // Get the canvas element
@@ -117,6 +120,16 @@ function drawSnake() {
 function drawSnakePart(snakePart) {
 
       // Set the colour of the snake part
+      if(rainbow){
+        let hex = '';
+        let i = 0;
+        while(i < 6){
+            let r = Math.floor((Math.random() * 16) + 1);
+            hex = hex + dic[r-1];
+            i++;
+        }
+        snake_col = '#' + hex;
+      }          
       snakeboard_ctx.fillStyle = snake_col;
       // Set the border colour of the snake part
       snakeboard_ctx.strokestyle = snake_border;
@@ -215,9 +228,9 @@ function drawFood()
 }
 
 $("#random").click(function() {
-        let dic =['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
-        let i = 0;
+        random = false;
         let hex = '';
+        let i = 0;
         while(i < 6){
             let r = Math.floor((Math.random() * 16) + 1);
             hex = hex + dic[r-1];
@@ -228,6 +241,7 @@ $("#random").click(function() {
 
 
 $("#black").click(function() {
+        random = false;
         snake_col = 'black';
         const r = document.querySelector('.randomColour');
         r.style.backgroundColor = 'transparent';
@@ -235,6 +249,10 @@ $("#black").click(function() {
 });
 
 $("#change").click(function() {
+        random = false;
         snake_col = prompt("Enter a colour or hex code", "red of #aw12034");
 });
 
+$("#rainbow").click(function() {
+    rainbow = true;
+});
