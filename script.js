@@ -13,7 +13,6 @@ var worm = document.getElementById('worm');
 var python = document.getElementById('python');
 var tit = document.getElementById('title');
 var end = document.getElementById('end');
-var start
     
 let snake = [
       {x: 250, y: 250},
@@ -40,7 +39,7 @@ let food_y;
 
 let dic =['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
 let rainbow = false;
-vr started= true;
+var started= true;
     
 // Get the canvas element
 const snakeboard = document.getElementById("board");
