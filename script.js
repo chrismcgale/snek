@@ -12,6 +12,7 @@ var slug = document.getElementById('slug');
 var worm = document.getElementById('worm');
 var python = document.getElementById('python');
 var tit = document.getElementById('title');
+var game = document.getElementById('game');
 
     
 let snake = [
@@ -105,9 +106,7 @@ function backButtons() {
 }
 
 function game() {
-    snakeboard_ctx.font = '25px Arial';
-    snakeboard_ctx.fillStyle = '0,0,0';
-    snakeboard_ctx.fillText(over, 100, 100);   
+    game.style.display = "block";
 }
     
 // draw a border around the canvas
