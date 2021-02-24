@@ -60,7 +60,7 @@ function main() {
         restart();
         return;
     }
-    consol.log(init[0].x);
+    console.log(init[0].x);
     hideButtons();
     changing_direction = false;
     setTimeout(function onTick() {
