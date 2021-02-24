@@ -85,6 +85,7 @@ function restart() {
     dy = dy / mult;
     mult = 1;
     score = 0;
+    document.getElementById('score').innerHTML = score;
 }
 
 function hideButtons() {
