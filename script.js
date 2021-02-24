@@ -3,7 +3,9 @@ const board_background = 'rgb(89, 152, 47)';
 const snake_border = 'black';
 var snake_col = 'yellow';
 const over = 'GAME OVER';
+var ticks = 100;
 
+//Objects in canvas we'll want to disapear/come back
 var rand = document.getElementById('random');
 var chan = document.getElementById('change');
 var bla = document.getElementById('black');
@@ -13,7 +15,8 @@ var worm = document.getElementById('worm');
 var python = document.getElementById('python');
 var tit = document.getElementById('title');
 var end = document.getElementById('end');
-    
+  
+//Initial position of snake
 const init = [
       {x: 250, y: 250},
       {x: 250, y: 240},
@@ -22,6 +25,7 @@ const init = [
       {x: 250, y: 210}
 ]
     
+//Shallow copy of snake object
 let snake = Array.from(init);
 
 // Gamescore
@@ -39,6 +43,7 @@ let mult = 1;
 let food_x;
 let food_y;
 
+//Used for rainbow and random colours
 let dic =['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
 let rainbow = false;
     
@@ -47,7 +52,6 @@ const snakeboard = document.getElementById("board");
 // Return a two dimensional drawing context
 const snakeboard_ctx = snakeboard.getContext("2d");
 
-var ticks = 100;
     
 document.addEventListener("keydown", change_direction);
 
@@ -60,7 +64,6 @@ function main() {
         restart();
         return;
     }
-    console.log(init[0].x);
     hideButtons();
     changing_direction = false;
     setTimeout(function onTick() {
@@ -72,6 +75,9 @@ function main() {
     main();
     }, ticks / mult)
 }
+
+function game() {
+    
 
 function restart() {
     backButtons();
