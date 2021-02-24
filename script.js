@@ -22,7 +22,7 @@ const init = [
       {x: 250, y: 210}
 ]
     
-let snake = init;
+let snake = Array.from(init);
 
 // Gamescore
 let score = 0;
@@ -77,7 +77,7 @@ function restart() {
     backButtons();
     clear_board();
     gen_food();
-    snake = init;
+    snake = Array.from(init);
     dx = 0;
     dy = 10;
     mult = 1;
