@@ -44,6 +44,8 @@ let rainbow = false;
 const snakeboard = document.getElementById("board");
 // Return a two dimensional drawing context
 const snakeboard_ctx = snakeboard.getContext("2d");
+
+var ticks = 100;
     
 document.addEventListener("keydown", change_direction);
 
@@ -65,22 +67,24 @@ function main() {
     drawSnake();
     // Call main again
     main();
-    }, 100)
+    }, ticks / mult)
 }
 
 function restart() {
     backButtons();
-        clear_board();
-        gen_food();
-        snake = [
+    clear_board();
+    gen_food();
+    snake = [
       {x: 250, y: 250},
       {x: 250, y: 240},
       {x: 250, y: 230},
       {x: 250, y: 220},
       {x: 250, y: 210}
          ]
-        dx = dx / mult;
-        dy = dy / mult;
+    dx = dx / mult;
+    dy = dy / mult;
+    mult = 1;
+    score = 0;
 }
 
 function hideButtons() {
