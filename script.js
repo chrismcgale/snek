@@ -81,8 +81,8 @@ function restart() {
       {x: 250, y: 220},
       {x: 250, y: 210}
          ]
-    dx = dx / mult;
-    dy = dy / mult;
+    dx = 0;
+    dy = 10;
     mult = 1;
     score = 0;
     document.getElementById('score').innerHTML = score;
