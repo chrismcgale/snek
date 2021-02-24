@@ -14,7 +14,7 @@ var python = document.getElementById('python');
 var tit = document.getElementById('title');
 var end = document.getElementById('end');
     
-let snake = [
+const init = [
       {x: 250, y: 250},
       {x: 250, y: 240},
       {x: 250, y: 230},
@@ -22,6 +22,8 @@ let snake = [
       {x: 250, y: 210}
 ]
     
+let snake = init;
+
 // Gamescore
 let score = 0;
 // True if changing direction
@@ -74,13 +76,7 @@ function restart() {
     backButtons();
     clear_board();
     gen_food();
-    snake = [
-      {x: 250, y: 250},
-      {x: 250, y: 240},
-      {x: 250, y: 230},
-      {x: 250, y: 220},
-      {x: 250, y: 210}
-         ]
+    snake = init;
     dx = 0;
     dy = 10;
     mult = 1;
