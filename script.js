@@ -73,7 +73,7 @@ function main() {
     drawSnake();
     // Call main again
     main();
-    }, ticks / mult)
+    }, ticks / 1000)
 }
 
 function game() {
