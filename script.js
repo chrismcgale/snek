@@ -54,6 +54,7 @@ var end = document.getElementById('end');
 //Start Game
 clear_board();
 gen_food();
+document.addEventListener("keydown", change_direction);
 
 // main function called repeatedly to keep the game running
 function main() {
@@ -167,40 +168,38 @@ function drawSnakePart(snakePart) {
 }
 
 
-document.addEventListener("keydown", function () {
-  function change_direction(event) {
-    const LEFT_KEY = 37;
-    const RIGHT_KEY = 39;
-    const UP_KEY = 38;
-    const DOWN_KEY = 40;
+function change_direction(event) {
+  const LEFT_KEY = 37;
+  const RIGHT_KEY = 39;
+  const UP_KEY = 38;
+  const DOWN_KEY = 40;
 
-    // Prevent the snake from reversing
+  // Prevent the snake from reversing
 
-    if (changing_direction) return;
-    changing_direction = true;
-    const keyPressed = event.keyCode;
-    const goingUp = dy === -10 * mult;
-    const goingDown = dy === 10 * mult;
-    const goingRight = dx === 10 * mult;
-    const goingLeft = dx === -10 * mult;
-    if (keyPressed === LEFT_KEY && !goingRight) {
-      dx = -10 * mult;
-      dy = 0;
-    }
-    if (keyPressed === UP_KEY && !goingDown) {
-      dx = 0;
-      dy = -10 * mult;
-    }
-    if (keyPressed === RIGHT_KEY && !goingLeft) {
-      dx = 10 * mult;
-      dy = 0;
-    }
-    if (keyPressed === DOWN_KEY && !goingUp) {
-      dx = 0;
-      dy = 10 * mult;
-    }
+  if (changing_direction) return;
+  changing_direction = true;
+  const keyPressed = event.keyCode;
+  const goingUp = dy === -10 * mult;
+  const goingDown = dy === 10 * mult;
+  const goingRight = dx === 10 * mult;
+  const goingLeft = dx === -10 * mult;
+  if (keyPressed === LEFT_KEY && !goingRight) {
+    dx = -10 * mult;
+    dy = 0;
   }
-});
+  if (keyPressed === UP_KEY && !goingDown) {
+    dx = 0;
+    dy = -10 * mult;
+  }
+  if (keyPressed === RIGHT_KEY && !goingLeft) {
+    dx = 10 * mult;
+    dy = 0;
+  }
+  if (keyPressed === DOWN_KEY && !goingUp) {
+    dx = 0;
+    dy = 10 * mult;
+  }
+}
 
 
 function move_snake() {
