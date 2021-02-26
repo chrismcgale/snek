@@ -65,7 +65,7 @@ function main() {
   hideButtons();
   changing_direction = false;
   setTimeout(function onTick() {
-    clear_board();
+    //clear_board();
     drawFood();
     move_snake();
     drawSnake();
