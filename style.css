@@ -32,15 +32,16 @@ html, body {
 
 #title {
   position: fixed;
-  top: 10%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 75px;
 }
 
 #end {
+  display: none;
   position: fixed;
-  top: 10%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 75px;
@@ -61,50 +62,50 @@ button {
 
 #slug {
   position: fixed;
-  top: 30%;
-  left: 20%;
+  top: 40%;
+  left: 40%;
   transform: translate(-50%, -50%);
 }
 
 #worm {
   position: fixed;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #python {
   position: fixed;
-  top: 30%;
-  left: 80%;
+  top: 40%;
+  left: 60%;
   transform: translate(-50%, -50%);
 }
 
 
 #black {
   position: fixed;
-  top: 60%;
-  left: 20%;
+  top: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
 }
 
 #random {
   position: fixed;
-  top: 60%;
-  left: 40%;
+  top: 50%;
+  left: 46%;
   transform: translate(-50%, -50%);
 }
 
 #change {
   position: fixed;
-  top: 60%;
-  left: 60%;
+  top: 50%;
+  left: 53%;
   transform: translate(-50%, -50%);
 }
 
 #rainbow {
   position: fixed;
-  top: 60%;
-  left: 80%;
+  top: 50%;
+  left: 60%;
   transform: translate(-50%, -50%);
 }
