@@ -65,7 +65,7 @@ function main() {
   hideButtons();
   changing_direction = false;
   setTimeout(function onTick() {
-    //clear_board();
+    clear_board();
     drawFood();
     move_snake();
     drawSnake();
@@ -207,7 +207,23 @@ function move_snake() {
   const head = { x: snake[0].x + dx, y: snake[0].y + dy };
   // Add the new head to the beginning of snake body
   snake.unshift(head);
-  const has_eaten_food = snake[0].x === food_x && snake[0].y === food_y;
+  var has_eaten_food = snake[0].x === food_x && snake[0].y === food_y;
+  //As snake moves 10*mult per tick, head may have gone past food by 10 or 20
+  if (mult != 1) {
+    if (snake[0].y == food_y) {
+      if (dx < 0) {
+        if (snake[0].x + 10 == food_x || snake[0].x + 20 == food_x) has_eaten_food = true;
+      } else {
+        if (snake[0].x - 10 == food_x || snake[0].x - 20 == food_x) has_eaten_food = true;
+      }
+    } else if (snake[0].x == food_x) {
+      if (dy < 0) {
+        if (snake[0].y + 10 == food_y || snake[0].y + 20 == food_y) has_eaten_food = true;
+      } else {
+        if (snake[0].y - 10 == food_y || snake[0].y - 20 == food_y) has_eaten_food = true;
+      }
+    }
+  }
   if (has_eaten_food) {
     // Increase score
     score += 10;
