@@ -32,17 +32,17 @@ html, body {
 
 #title {
   position: fixed;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
+  font-size: 75px;
 }
 
 #end {
-  display: none;
-  top: 100px;
-  position: absolute;
-  text-align: center;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 75px;
 }
 
@@ -60,37 +60,51 @@ button {
 }
 
 #slug {
-  top: 250px; 
-  text-align: left;
+  position: fixed;
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
 }
 
 #worm {
-  top: 250px; 
-  text-align: center;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #python {
-  top: 250px; 
-  text-align: right;
+  position: fixed;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
 
+
+#black {
+  position: fixed;
+  top: 60%;
+  left: 20%;
+  transform: translate(-50%, -50%);
 }
 
 #random {
-  top: 300px; 
-  text-align: left;
-}
-
-#black {
-  top:300px; 
-  text-align: center;
+  position: fixed;
+  top: 60%;
+  left: 40%;
+  transform: translate(-50%, -50%);
 }
 
 #change {
-  top:300px; 
-  text-align: center;
+  position: fixed;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
 }
 
 #rainbow {
-  top:300px; 
-  text-align: right;
+  position: fixed;
+  top: 60%;
+  left: 80%;
+  transform: translate(-50%, -50%);
 }
